@@ -1,0 +1,65 @@
+# Step-by-Step Guide to Push a Project to GitHub Using VS Code
+
+## Step 1: Open Folder in VS Code
+1. Open Visual Studio Code (VS Code).
+2. Click on **File > Open Folder**.
+3. Navigate to the folder you want to work with and select it.
+4. The folder will open, and its contents will be visible in the **Explorer** sidebar.
+
+## Step 2: Initialize Git in the Folder
+1. Open the terminal in VS Code by pressing `Ctrl + \`` (backtick) or navigating to **View > Terminal**.
+2. Run the following command to initialize Git in the folder:
+   ```bash
+   git init
+   ```
+   This command sets up a new Git repository in your folder.
+
+## Step 3: Stage Files for Commit
+1. To tell Git which files to track, run the following command:
+   ```bash
+   git add .
+   ```
+   The `.` indicates that all files in the folder should be staged.
+
+## Step 4: Commit Changes
+1. Save the current state of your files by creating a commit:
+   ```bash
+   git commit -m "First commit"
+   ```
+   Replace `"First commit"` with a meaningful message describing the changes.
+
+## Step 5: Create a GitHub Repository
+1. Go to [GitHub](https://github.com/) and log in to your account.
+2. Click on the **New Repository** button.
+3. Enter a repository name (e.g., `my-folder`) and set it as public or private.
+4. Click on **Create Repository**.
+
+## Step 6: Link Local Repository to GitHub
+1. Copy the URL of your GitHub repository (e.g., `https://github.com/your-username/my-folder.git`).
+2. Link your local repository to the GitHub repository using the following command:
+   ```bash
+   git remote add origin https://github.com/your-username/my-folder.git
+   ```
+
+## Step 7: Verify Remote Repository
+1. To verify that the remote repository is linked correctly, run:
+   ```bash
+   git remote -v
+   ```
+   Expected output:
+   ```
+   origin  https://github.com/your-username/my-folder.git (fetch)
+   origin  https://github.com/your-username/my-folder.git (push)
+   ```
+
+## Step 8: Push Files to GitHub
+1. Upload your files to GitHub by running:
+   ```bash
+   git push -u origin master
+   ```
+   This command pushes your local files to the `master` branch of the GitHub repository.
+
+---
+
+**Congratulations!** Your project is now uploaded to GitHub. You can view it on your repository page.
+
